@@ -67,7 +67,8 @@ public class QuickSort {
 	 *the convention remains.
 	 */
 	
-	//The partition algorithm for the sort. Pivots the array around the last element and .
+	//The partition algorithm for the sort. Pivots the array around the last element and then merges the two resulting
+	//arrays.
 	public int partition(int target[], int low, int high) {
 		int pivot = target[high];
 		int i = low-1;
