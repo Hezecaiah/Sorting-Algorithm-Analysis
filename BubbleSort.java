@@ -44,8 +44,7 @@ public class BubbleSort {
 	
 	//Standard bubble sorting algorithm. Could be optimised in various ways (i.e., bounding the index search 
 	//such that it won't check the highest end of the array after sorting as the highest value is guaranteed 
-	//to be correct after an iteration.)
-	
+	//to be correct after an iteration.
 	public void bubbleSort(int target[]){
 		int iterations = 0;
 		int operations = 0;
