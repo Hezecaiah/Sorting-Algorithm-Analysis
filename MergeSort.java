@@ -64,6 +64,8 @@ public class MergeSort {
 	 *This is also a recursive function but the iteration naming convention continues to stand.
 	 */
 	
+	//Merging method to split an array in half and then put it back together around the appropriate
+	//middle value.
 	public void merge(int target[], int left, int middle, int right) {
 		
 		int n1 = middle - left + 1;
@@ -73,35 +75,35 @@ public class MergeSort {
 		int Right[] = new int [n2];
 		
 		for (int i = 0; i<n1; ++i) {
-            Left[i] = target[left + i]; 
+        	Left[i] = target[left + i]; 
 		}
-        for (int j = 0; j<n2; ++j) {
-        	 Right[j] = target[middle + 1 + j];
-        }
+      		for (int j = 0; j<n2; ++j) {
+        		Right[j] = target[middle + 1 + j];
+		}
         
-        int i = 0, j = 0, k = left;
+        	int i = 0, j = 0, k = left;
         
-        while (i < n1 && j < n2) {
-            if (Left[i] <= Right[j]) { 
-                target[k] = Left[i];
-                i++;
-                operations++;
-            } else { 
-                target[k] = Right[j]; 
-                j++;
-                operations++;
-            } 
-            k++; 
-        }
+        	while (i < n1 && j < n2) {
+           		if (Left[i] <= Right[j]) { 
+                	target[k] = Left[i];
+			i++;
+               		operations++;
+           	} else { 
+               		target[k] = Right[j]; 
+                	j++;
+                	operations++;
+            	} 
+            	k++; 
+        	}
         
-        while (i < n1) { 
-            target[k] = Left[i];
-            operations++;
-            i++; 
-            k++;
-        }
+        	while (i < n1) { 
+            		target[k] = Left[i];
+            		operations++;
+            		i++; 
+            		k++;
+        	}
         
-        while (j < n2) { 
+        	while (j < n2) { 
             target[k] = Right[j]; 
             operations++;
             j++; 
@@ -109,6 +111,7 @@ public class MergeSort {
         }
     }
 	
+	//Recursive method to implement the merging method throughout an array and thus, sort it.
 	public void mergeSort(int target[], int left, int right) {
 		
 		if(left < right) {
