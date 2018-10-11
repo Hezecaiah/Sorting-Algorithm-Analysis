@@ -20,4 +20,4 @@ of an abstract concept like program runtime by showing a concrete example thereo
 *The average runtime complexity of the quick sort in question will not be derived as the math required is exhaustive and has already been
 solved by various authorities.
 
-These classes may need to be pasted into a newly constructed Java product and package titled Sorts to run properly.
+P.S.: These classes may need to be pasted into a newly constructed Java product and package titled Sorts to run properly.
